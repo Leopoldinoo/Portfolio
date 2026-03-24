@@ -5,6 +5,7 @@ import HeroSection from "@/components/HeroSection.jsx";
 import AboutSection from "@/components/AboutSection.jsx";
 import ProjectsSection from "@/components/ProjectsSection.jsx";
 import SkillsSection from "./components/SkillsSection";
+import ExperienceSection from "./components/ExperienceSection";
 export default function Home() {
   return (
     <main className="relative overflow-hidden flex flex-col justify-center">
@@ -13,6 +14,7 @@ export default function Home() {
       <AboutSection></AboutSection>
       <ProjectsSection></ProjectsSection>
       <SkillsSection></SkillsSection>
+      <ExperienceSection></ExperienceSection>
       <ParticleBackgrounds />
     </main>
   );

@@ -56,6 +56,30 @@ return (
           </motion.div>
         ))}
       </div>
+      {/* Badge-style overview */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          className="mt-16 p-8 rounded-2xl border border-white/5 bg-white/[0.02] backdrop-blur-sm"
+        >
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
+            {[
+              { value: "15+", label: "Projetos" },
+              { value: "1,5+", label: "Anos de Codificação" },
+              { value: "9+", label: "Tecnologias" },
+              { value: "100%", label: "Paixão" },
+            ].map((stat, i) => (
+              <div key={i}>
+                <p className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  {stat.value}
+                </p>
+                <p className="text-sm text-gray-500 mt-1">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
     </div>
   </section>
 )};

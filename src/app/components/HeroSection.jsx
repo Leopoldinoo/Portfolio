@@ -28,7 +28,6 @@ export default function HeroSection() {
 
   return (
     <section className="relative flex flex-col items-center justify-center min-h-160 text-center px-4 overflow-hidden">
-
       {/* Círculo de brilho suave no fundo para profundidade */}
       <div className="absolute w-[250px] h-[250px] bg-blue-500/10 rounded-full blur-[120px] -z-10" />
 
@@ -50,11 +49,13 @@ export default function HeroSection() {
         transition={{
           delay: isTypingComplete ? 0.2 : 1.5,
           duration: 0.5,
-          ease: "easeOut"
+          ease: "easeOut",
         }}
         className="text-lg md:text-xl max-w-2xl text-gray-300 leading-relaxed"
       >
-        Transformando ideias complexas em <span className="text-blue-400 font-mono">aplicações completas</span> e escaláveis.
+        Transformando ideias complexas em{" "}
+        <span className="text-blue-400 font-mono">aplicações completas</span> e
+        escaláveis.
       </motion.p>
 
       {/* Botão de Call to Action (CTA) - Essencial para um portfólio */}
@@ -64,15 +65,17 @@ export default function HeroSection() {
         transition={{
           delay: isTypingComplete ? 0.4 : 1.7,
           duration: 0.5,
-          ease: "easeOut"
+          ease: "easeOut",
         }}
         className="mt-10"
       >
-        <a href="#projects" className="px-8 py-3 bg-white text-black font-semibold rounded-full hover:bg-blue-400 transition-colors hover:scale-105">
+        <a
+          href="#projects"
+          className="px-8 py-4 rounded-full bg-[#111827] border border-violet-500/40 text-white hover:border-violet-400 hover:bg-[#1E293B] hover:shadow-[0_0_25px_rgba(124,58,237,.45)] transition-all duration-300"
+        >
           Ver Projetos
         </a>
       </motion.div>
-
     </section>
   );
 }
